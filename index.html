@@ -210,7 +210,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2023/04/05/JavaScript/" target="_blank">JavaScript</a>
+	  <a class="article-title" href="/2023/04/05/JavaScript/" target="_blank">JavaScript基础语法</a>
   
     </h1>
   
@@ -231,7 +231,113 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>你好呀</p>
+    <p>JavaScript基础语法<br>HTML ：标记语言<br>JavaScript ：编程语言<br>序言<br>JavaScript发展历史（JS）</p>
+<ol>
+<li><p>1994年，网景公司(Netscape)发布了Navigator浏览器0.9版，这是世界上第一款比较成熟的网络浏览器，轰动一时。但是这是一款名副其实的浏览器–只能浏览页面，浏览器无法与用户互动,当时解决这个问题有两个办法，一个是采用现有的语言,许它们直接嵌入网页。另一个是发明一种全新的语言。<br>liveScript ==&gt; javaScript ==&gt; ECMAscript</p>
+</li>
+<li><p>1995年Sun公司将Oak语言改名为Java，正式向市场推出。Sun公司大肆宣传，许诺这种语言可以”一次编写，到处运 行”(Write Once, Run Anywhere)，它看上去很可能成为未来的主宰。</p>
+</li>
+<li><p>网景公司动了心，决定与Sun公司结成联盟</p>
+</li>
+<li><p>34岁的系统程序员Brendan Eich登场了。1995年4月，网景公司录用了他,他只用10天时间就把Javascript设计出来了。（多态语言）</p>
+</li>
+<li><p>(1)借鉴C语言的基本语法; (2)借鉴Java语言的数据类型和内存管理; (3)借鉴Scheme语言，将函数提升到”第一等公民”(first class)的地位; (4)借鉴Self语言，使用基于原型(prototype)的继承机制。<br>JavaScript能干什么</p>
+</li>
+<li><p>常见的网页效果【表单验证，轮播图。。。】</p>
+</li>
+<li><p>与H5配合实现游戏【水果忍者： <a target="_blank" rel="noopener" href="http://www.jq22.com/demo/html5-fruit-ninja/%E3%80%91">http://www.jq22.com/demo/html5-fruit-ninja/】</a></p>
+</li>
+<li><p>实现应用级别的程序【<a target="_blank" rel="noopener" href="http://naotu.baidu.com】/">http://naotu.baidu.com】</a></p>
+</li>
+<li><p>实现统计效果【<a target="_blank" rel="noopener" href="http://echarts.baidu.com/examples/%E3%80%91">http://echarts.baidu.com/examples/】</a></p>
+</li>
+<li><p>地理定位等功能【<a target="_blank" rel="noopener" href="http://lbsyun.baidu.com/jsdemo.htm#i4_5%E3%80%91">http://lbsyun.baidu.com/jsdemo.htm#i4_5】</a></p>
+</li>
+<li><p>在线学编程【<a target="_blank" rel="noopener" href="https://codecombat.163.com/play/%E3%80%91">https://codecombat.163.com/play/】</a></p>
+</li>
+<li><p>js可以实现人工智能【面部识别】</p>
+</li>
+<li><p>。。。<br>JavaScript的组成</p>
+</li>
+<li><p>ECMASCRIPT: 定义了javascript的语法规范,描述了语言的基本语法和数据类型</p>
+</li>
+<li><p>BOM (Browser Object Model): 浏览器对象模型</p>
+</li>
+</ol>
+<ul>
+<li>有一套成熟的可以操作浏览器的 API，通过 BOM 可以操作浏览器。比如： 弹出框、浏览器跳转、获取分辨率等</li>
+</ul>
+<ol start="3">
+<li>DOM (Document Object Model): 文档对象模型</li>
+</ol>
+<ul>
+<li>有一套成熟的可以操作页面元素的 API，通过 DOM 可以操作页面中的元素。比如： 增加个 div，减少个 div，给div 换个位置等<br>总结： JS 就是通过固定的语法去操作 浏览器 和 标签结构 来实现网页上的各种效果</li>
+</ul>
+<p>JavaScript代码的书写位置<br>和 css 一样，我们的 js 也可以有多种方式书写在页面上让其生效<br>js 也有多种方式书写，分为 行内式， 内嵌式，外链式<br>行内式 JS 代码（不推荐）<br>写在标签上的 js 代码需要依靠事件（行为）来触发</p>
+<!-- 写在 a 标签的 href 属性上 -->
+<p><a href="javascript:alert('我是一个弹出层');">点击一下试试</a></p>
+<!-- 写在其他元素上 -->
+<div onclick="alert('我是一个弹出层')">点一下试试看</div>
+
+<!-- 
+ 注：onclick 是一个事件（点击事件），当点击元素的时候执行后面的 js 代码
+-->
+<p>内嵌式 JS 代码<br>内嵌式的 js 代码会在页面打开的时候直接触发</p>
+<!-- 在 html 页面书写一个 script 标签，标签内部书写 js 代码 -->
+<script type="text/javascript">
+ alert('我是一个弹出层')
+</script>
+
+<!-- 
+ 注：script 标签可以放在 head 里面也可以放在 body 里面
+-->
+<p>外链式 JS 代码（推荐）<br>外链式 js 代码只要引入了 html 页面，就会在页面打开的时候直接触发<br>新建一个 .js 后缀的文件，在文件内书写 js 代码，把写好的 js 文件引入 html 页面<br>// 我是 index.js 文件<br>alert(‘我是一个弹出层’)</p>
+<!-- 我是一个 html 文件 -->
+
+<!-- 通过 script 标签的 src 属性，把写好的 js 文件引入页面 -->
+<script src="index.js"></script>
+
+<!-- 一个页面可以引入多个 js 文件 -->
+<script src="index1.js"></script>
+<script src="index2.js"></script>
+<script src="index3.js"></script>
+<p>JS 中的注释<br>学习一个语言，先学习一个语言的注释，因为注释是给我们自己看的，也是给开发人员看的<br>写好一个注释，有利于我们以后阅读代码<br>单行注释(mac:shift+option+a)<br>一般就是用来描述下面一行代码的作用<br>可以直接写两个 / ，也可以按 ctrl + /<br>// 我是一个单行注释</p>
+<p>// 下面代码表示在浏览器里面出现一个弹出层<br>alert(‘我是一个弹出层’)<br>多行注释(mac: command+/)<br>一般用来写一大段话，或者注释一段代码<br>可以直接写 /**/ 然后在两个星号中间写注释，也可以按 shift + alt + a<br>/*<br> 我是一个多行注释<br>*/</p>
+<p>/*<br> 注释的代码不会执行<br> alert(‘我是一个弹出层’)<br> alert(‘我是一个弹出层’)<br>*/<br>alert(‘我是一个弹出层’)<br>变量（重点）<br>变量指的是在程序中保存数据的一个容器<br>变量是计算机内存中存储数据的标识符，根据变量名称可以获取到内存中存储的数据<br>也就是说，我们向内存中存储了一个数据，然后要给这个数据起一个名字，为了是我们以后再次找到他<br>语法： var 变量名 = 值<br>定义变量及赋值<br>// 定义一个变量<br>var num;</p>
+<p>// 给一个变量赋值<br>num = 100;</p>
+<p>// 定义一个变量的同时给其赋值<br>var num2 = 200;<br>注意：<br>一个变量名只能存储一个值<br>当再次给一个变量赋值的时候，前面一次的值就没有了<br>变量名称区分大小写（JS 区分大小写）<br>变量的命名规则和命名规范<br>规则： 必须遵守的，不遵守就是错<br>一个变量名称可以由 数字、字母、英文下划线（_）、美元符号（$） 组成<br>严格区分大小写<br>不能由数字开头，不要使用中文汉字命名<br>不能是 保留字 或者 关键字<br>不要出现空格<br>规范： 建议遵守的（开发者默认），不遵守不会报错<br>变量名尽量有意义（语义化）<br>遵循驼峰命名规则，由多个单词组成的时候，从第二个单词开始首字母大写<br>数据类型（重点）<br>是指我们存储在内存中的数据的类型<br>我们通常分为两大类 基本数据类型 和 复杂数据类型<br>基本数据类型<br>数值类型（number）<br>一切数字都是数值类型（包括二进制，十进制，十六进制等）<br>NaN（not a number），一个非数字<br>字符串类型（string）<br>被引号包裹的所有内容（可以是单引号也可以是双引号）<br>布尔类型（boolean）<br>只有两个（true 或者 false）<br>null类型（null）<br>只有一个，就是 null，表示空的意思<br>undefined类型（undefined）<br>只有一个，就是 undefined，表示没有值的意思<br>复杂数据类型（暂时先不讲）<br>对象类型（object）<br>函数类型（function）<br>。。。<br>判断数据类型<br>既然已经把数据分开了类型，那么我们就要知道我们存储的数据是一个什么类型的数据<br>使用 typeof 关键字来进行判断<br>// 第一种使用方式<br>var n1 = 100;<br>console.log(typeof n1);</p>
+<p>// 第二种使用方式<br>var s1 = ‘abcdefg’;<br>console.log(typeof(s1));<br>数据类型转换<br>数据类型之间的转换，比如数字转成字符串，字符串转成布尔，布尔转成数字等<br>其他数据类型转成数值<br>Number(变量)</p>
+<p>可以把一个变量强制转换成数值类型<br>可以转换小数，会保留小数<br>可以转换布尔值<br>遇到不可转换的都会返回 NaN<br>parseInt(变量)</p>
+<p>从第一位开始检查，是数字就转换，知道一个不是数字的内容<br>开头就不是数字，那么直接返回 NaN<br>不认识小数点，只能保留整数<br>parseFloat(变量)</p>
+<p>从第一位开始检查，是数字就转换，知道一个不是数字的内容</p>
+<p>开头就不是数字，那么直接返回 NaN</p>
+<p>认识一次小数点</p>
+<p>除了加法以外的数学运算</p>
+<p>运算符两边都是可运算数字才行<br>如果运算符任何一遍不是一个可运算数字，那么就会返回 NaN<br>加法不可以用<br>其他数据类型转成字符串<br>变量.toString()<br>有一些数据类型不能使用 toString() 方法，比如 undefined 和 null<br>String(变量)<br>所有数据类型都可以<br>使用加法运算<br>在 JS 里面，+ 由两个含义<br>字符串拼接： 只要 + 任意一边是字符串，就会进行字符串拼接<br>加法运算：只有 + 两边都是数字的时候，才会进行数学运算<br>其他数据类型转成布尔<br>Boolean(变量)<br>在 js 中，只有 ‘’、0、null、undefined、NaN，这些是 false，其余都是 true<br>运算符<br>就是在代码里面进行运算的时候使用的符号，不光只是数学运算，我们在 js 里面还有很多的运算方式<br>数学运算符<br>+</p>
+<p>只有符号两边都是数字的时候才会进行加法运算<br>只要符号任意一边是字符串类型，就会进行字符串拼接<br>-</p>
+<p>会执行减法运算</p>
+<p>会自动把两边都转换成数字进行运算</p>
+<p>*</p>
+<p>会执行乘法运算<br>会自动把两边都转换成数字进行运算<br>/</p>
+<p>会执行除法运算<br>会自动把两边都转换成数字进行运算<br>%</p>
+<p>会执行取余运算<br>会自动把两边都转换成数字进行运算<br>赋值运算符<br>=</p>
+<p>就是把 = 右边的赋值给等号左边的变量名<br>var num = 100<br>就是把 100 赋值给 num 变量<br>那么 num 变量的值就是 100<br>+=</p>
+<p>var a = 10;<br>a += 10;<br>console.log(a); //=&gt; 20<br>a += 10 等价于 a = a + 10<br>-=</p>
+<p>var a = 10;<br>a -= 10;<br>console.log(a); //=&gt; 0<br>a -= 10 等价于 a = a - 10<br>*=</p>
+<p>var a = 10;<br>a *= 10;<br>console.log(a); //=&gt; 100<br>a *= 10 等价于 a = a * 10<br>/+</p>
+<p>var a = 10;<br>a /= 10;<br>console.log(a); //=&gt; 1<br>a /= 10 等价于 a = a / 10<br>%=</p>
+<p>var a = 10;<br>a %= 10;<br>console.log(a); //=&gt; 0<br>a %= 10 等价于 a = a % 10<br>比较运算符<br>==<br>比较符号两边的值是否相等，不管数据类型<br>1 == ‘1’<br>两个的值是一样的，所以得到 true<br>===<br>比较符号两边的值和数据类型是否都相等<br>1 === ‘1’<br>两个值虽然一样，但是因为数据类型不一样，所以得到 false<br>!=<br>比较符号两边的值是否不等<br>1 != ‘1’<br>因为两边的值是相等的，所以比较他们不等的时候得到 false<br>!==<br>比较符号两边的数据类型和值是否不等<br>1 !== ‘1’<br>因为两边的数据类型确实不一样，所以得到 true</p>
+<blockquote>
+<p>=<br>比较左边的值是否 大于或等于 右边的值<br>1 &gt;= 1 true<br>1 &gt;= 0 true<br>1 &gt;= 2 false<br>&lt;=<br>比较左边的值是否 小于或等于 右边的值<br>1 &lt;= 2 true<br>1 &lt;= 1 true<br>1 &lt;= 0 false</p>
+</blockquote>
+<p>比较左边的值是否 大于 右边的值<br>1 &gt; 0 true<br>1 &gt; 1 false<br>1 &gt; 2 false<br>&lt;<br>比较左边的值是否 小于 右边的值<br>1 &lt; 2 true<br>1 &lt; 1 false<br>1 &lt; 0 false<br>###逻辑运算符</p>
+<p>&amp;&amp;<br>进行 且 的运算<br>符号左边必须为 true 并且右边也是 true，才会返回 true<br>只要有一边不是 true，那么就会返回 false<br>true &amp;&amp; true true<br>true &amp;&amp; false false<br>false &amp;&amp; true false<br>false &amp;&amp; false false<br>||<br>进行 或 的运算<br>符号的左边为 true 或者右边为 true，都会返回 true<br>只有两边都是 false 的时候才会返回 false<br>true || true true<br>true || false true<br>false || true true<br>false || false false<br>!<br>进行 取反 运算<br>本身是 true 的，会变成 false<br>本身是 false 的，会变成 true<br>!true false<br>!false true<br>自增自减运算符（一元运算符）<br>++</p>
+<p>进行自增运算</p>
+<p>分成两种，前置++ 和 后置++</p>
+<p>前置++，会先把值自动 +1，在返回</p>
+<p>var a = 10;<br>console.log(++a);<br>// 会返回 11，并且把 a 的值变成 11<br>后置++，会先把值返回，在自动+1</p>
+<p>var a = 10;<br>console.log(a++);<br>// 会返回 10，然后把 a 的值变成 11<br>–</p>
+<p>进行自减运算<br>分成两种，前置– 和 后置–<br>和 ++ 运算符道理一样<br>扩展内容：结合优先级从高到低<br>    + 1 () 优先级最高<br>    + 2 一元(单目)运算符:++,–,!<br>    + 3 算术运算符: 先*,/,%  再+,-<br>    + 4 关系运算符:&gt;,&gt;=,&lt;,&lt;=<br>    + 5 相等运算符:==,===,!=,!==<br>    + 6 逻辑运算符:先&amp;&amp;，再||<br>    + 7 赋值运算符<br>    + 口诀:单目算术位关系，逻辑三目后赋值</p>
 
     
 
