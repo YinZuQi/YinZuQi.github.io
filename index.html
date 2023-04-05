@@ -275,18 +275,19 @@
 </ul>
 <p>JavaScript代码的书写位置<br>和 css 一样，我们的 js 也可以有多种方式书写在页面上让其生效<br>js 也有多种方式书写，分为 行内式， 内嵌式，外链式<br>行内式 JS 代码（不推荐）<br>写在标签上的 js 代码需要依靠事件（行为）来触发</p>
 <!-- 写在 a 标签的 href 属性上 -->
-<p><a href="javascript:alert('我是一个弹出层');">点击一下试试</a></p>
+<!-- <a href="javascript:alert('我是一个弹出层');">点击一下试试</a> -->
+
 <!-- 写在其他元素上 -->
-<div onclick="alert('我是一个弹出层')">点一下试试看</div>
+<!-- <div onclick="alert('我是一个弹出层')">点一下试试看</div> -->
 
 <!-- 
  注：onclick 是一个事件（点击事件），当点击元素的时候执行后面的 js 代码
 -->
 <p>内嵌式 JS 代码<br>内嵌式的 js 代码会在页面打开的时候直接触发</p>
 <!-- 在 html 页面书写一个 script 标签，标签内部书写 js 代码 -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
  alert('我是一个弹出层')
-</script>
+</script> -->
 
 <!-- 
  注：script 标签可以放在 head 里面也可以放在 body 里面
@@ -295,12 +296,12 @@
 <!-- 我是一个 html 文件 -->
 
 <!-- 通过 script 标签的 src 属性，把写好的 js 文件引入页面 -->
-<script src="index.js"></script>
+<!-- <script src="index.js"></script> -->
 
 <!-- 一个页面可以引入多个 js 文件 -->
-<script src="index1.js"></script>
+<!-- <script src="index1.js"></script>
 <script src="index2.js"></script>
-<script src="index3.js"></script>
+<script src="index3.js"></script> -->
 <p>JS 中的注释<br>学习一个语言，先学习一个语言的注释，因为注释是给我们自己看的，也是给开发人员看的<br>写好一个注释，有利于我们以后阅读代码<br>单行注释(mac:shift+option+a)<br>一般就是用来描述下面一行代码的作用<br>可以直接写两个 / ，也可以按 ctrl + /<br>// 我是一个单行注释</p>
 <p>// 下面代码表示在浏览器里面出现一个弹出层<br>alert(‘我是一个弹出层’)<br>多行注释(mac: command+/)<br>一般用来写一大段话，或者注释一段代码<br>可以直接写 /**/ 然后在两个星号中间写注释，也可以按 shift + alt + a<br>/*<br> 我是一个多行注释<br>*/</p>
 <p>/*<br> 注释的代码不会执行<br> alert(‘我是一个弹出层’)<br> alert(‘我是一个弹出层’)<br>*/<br>alert(‘我是一个弹出层’)<br>变量（重点）<br>变量指的是在程序中保存数据的一个容器<br>变量是计算机内存中存储数据的标识符，根据变量名称可以获取到内存中存储的数据<br>也就是说，我们向内存中存储了一个数据，然后要给这个数据起一个名字，为了是我们以后再次找到他<br>语法： var 变量名 = 值<br>定义变量及赋值<br>// 定义一个变量<br>var num;</p>
